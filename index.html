@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Aroha Digital</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#ffffff",
+                        "background-off": "#f8f9fa",
+                        "text-main": "#000000",
+                        "text-muted": "#4b5563",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-text-main antialiased selection:bg-primary/30 selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <header class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+            <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                <a href="#" class="text-3xl font-black tracking-tighter text-black font-display select-none">
+                    <span class="text-primary">{</span>aroha<span class="text-primary">}</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="#services">Services</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="#pricing">Pricing</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="#about">About</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="#about"
+                        class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-sm hover:shadow-md">
+                        Enquire Now
+                    </a>
+                    <button class="flex md:hidden text-black">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <section class="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-32 lg:pb-28">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+                        <div class="flex flex-col gap-6 text-center lg:text-left">
+                            <h1
+                                class="text-4xl font-black leading-[1.1] tracking-tight text-black sm:text-5xl lg:text-6xl">
+                                Academic Projects You <span
+                                    class="bg-primary/20 px-2 decoration-primary underline decoration-4 underline-offset-4">Actually
+                                    Understand</span>
+                            </h1>
+                            <p class="mx-auto max-w-lg text-lg leading-relaxed text-text-muted lg:mx-0">
+                                Guided Django &amp; web projects with full explanation and viva support. We don't just
+                                give you code; we teach you how it works.
+                            </p>
+                            <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                                <button
+                                    class="h-12 rounded-lg bg-primary px-8 text-base font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
+                                    View Project Services
+                                </button>
+                                <button
+                                    class="h-12 rounded-lg border-2 border-gray-200 bg-transparent px-8 text-base font-bold text-black hover:border-black transition-colors">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div
+                                class="mt-6 flex items-center justify-center gap-4 lg:justify-start text-sm text-text-muted">
+                                <div class="flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+                                    <span>Viva Support</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+                                    <span>Code Explanation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mx-auto w-full max-w-[600px] lg:max-w-none">
+                            <div class="relative flex items-center justify-center">
+                                <div
+                                    class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/20 blur-3xl -z-10">
+                                </div>
+                                <div
+                                    class="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl -z-10">
+                                </div>
+                                <img alt="Aroha Digital Hero Image"
+                                    class="relative z-10 w-full max-w-[500px] h-auto transform transition-transform hover:-translate-y-2 duration-500 drop-shadow-2xl"
+                                    src="main.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-background-off py-20" id="services">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mb-12 text-center">
+                        <h2 class="text-base font-bold text-primary uppercase tracking-wide">What We Offer</h2>
+                        <h3 class="mt-2 text-3xl font-black tracking-tight text-black sm:text-4xl">Our Core Services
+                        </h3>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+                        <div
+                            class="group relative flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border border-gray-100">
+                            <div
+                                class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined text-[32px]">code_blocks</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-black">Project Building Service</h4>
+                                <p class="mt-2 text-text-muted">Complete end-to-end support for your final year academic
+                                    projects.</p>
+                            </div>
+                            <ul class="flex flex-col gap-3 mt-auto">
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Ideation &amp; Topic Selection
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Development &amp; Implementation
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Viva Preparation &amp; Mock Tests
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="group relative flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border border-gray-100">
+                            <div
+                                class="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-purple-600 group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined text-[32px]">school</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-black">Project-Based Courses</h4>
+                                <p class="mt-2 text-text-muted">Learn by doing. Master concepts through practical
+                                    implementation.</p>
+                            </div>
+                            <ul class="flex flex-col gap-3 mt-auto">
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Focus on Core Fundamentals
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Real-world Application Building
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                    Personalized Tuition
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white py-20" id="pricing">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mb-8 text-center">
+                        <h2 class="text-3xl font-black tracking-tight text-black sm:text-4xl">Transparent Pricing</h2>
+                        <p class="mt-4 text-text-muted">Choose the plan that fits your academic requirements.</p>
+                    </div>
+                    <div class="flex justify-center mb-12">
+                        <div class="flex h-12 w-full max-w-[320px] items-center rounded-full bg-gray-100 p-1">
+                            <label class="cursor-pointer flex-1 relative h-full">
+                                <input checked="" class="peer sr-only" name="pricing-toggle" type="radio"
+                                    value="services" />
+                                <div
+                                    class="flex h-full w-full items-center justify-center rounded-full text-sm font-bold text-gray-500 transition-all peer-checked:bg-white peer-checked:text-black peer-checked:shadow-sm">
+                                    Project Services
+                                </div>
+                            </label>
+                            <label class="cursor-pointer flex-1 relative h-full">
+                                <input class="peer sr-only" name="pricing-toggle" type="radio" value="courses" />
+                                <div
+                                    class="flex h-full w-full items-center justify-center rounded-full text-sm font-bold text-gray-500 transition-all peer-checked:bg-white peer-checked:text-black peer-checked:shadow-sm">
+                                    Courses
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="pricing-services"
+                        class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto transition-opacity duration-300">
+                        <div
+                            class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-primary hover:shadow-lg">
+                            <h3 class="text-lg font-bold text-black">Micro</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-black">₹1500</span>
+                                <span class="text-sm font-medium text-gray-500">/project</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-500">For simple academic requirements.</p>
+                            <div class="mt-8 flex flex-col gap-3 flex-1">
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Basic Implementation
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Standard Documentation
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Basic Support
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-xl transition-transform hover:-translate-y-2">
+                            <div
+                                class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-black px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
+                                Most Popular
+                            </div>
+                            <h3 class="text-lg font-bold text-black">Mini</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-black">₹2500</span>
+                                <span class="text-sm font-medium text-gray-500">/project</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-500">Standard academic project requirements.</p>
+                            <div class="mt-8 flex flex-col gap-3 flex-1">
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Standard Requirements
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Detailed Documentation
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Viva Support &amp; Mocks
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                    Code Walkthrough
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-primary hover:shadow-lg">
+                            <h3 class="text-lg font-bold text-black">Major</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-black">₹6000</span>
+                                <span class="text-sm font-medium text-gray-500">/project</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-500">Complex, full-stack solutions.</p>
+                            <div class="mt-8 flex flex-col gap-3 flex-1">
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Full Stack Solution
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Complex Logic &amp; Algo
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Priority Viva Support
+                                </div>
+                                <div class="flex items-start gap-3 text-sm text-gray-700">
+                                    <span
+                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                    Deployment Support
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pricing-courses" class="hidden max-w-6xl mx-auto transition-opacity duration-300">
+                        <div class="grid gap-6 md:grid-cols-2 mb-12">
+                            <!-- Python Django 101 -->
+                            <div
+                                class="flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-xl transition-transform hover:-translate-y-2">
+                                <div
+                                    class="absolute -top-4 right-8 rounded-full bg-black px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
+                                    Project-Based
+                                </div>
+                                <h3 class="text-xl font-bold text-black">Python Django 101</h3>
+                                <div class="mt-4 flex flex-col gap-1">
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-4xl font-black text-black">₹999</span>
+                                        <span class="text-sm font-medium text-gray-500">/ Online</span>
+                                    </div>
+                                    <div class="text-sm font-medium text-gray-500">
+                                        or ₹1499 for Offline (Trivandrum)
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-sm text-gray-500">Build real-world projects while learning.</p>
+                                <div class="mt-8 flex flex-col gap-3 flex-1">
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        Learn by Building Projects
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        Strong Core Concept Understanding
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        Mini Project Guidance
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        Notes & Study Materials
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CS Topics Tuition -->
+                            <div
+                                class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-black hover:shadow-lg">
+                                <h3 class="text-xl font-bold text-black">CS Topics Tuition</h3>
+                                <div class="mt-4 flex flex-col gap-1">
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-4xl font-black text-black">₹999</span>
+                                        <span class="text-sm font-medium text-gray-500">/ Individual</span>
+                                    </div>
+                                    <div class="text-sm font-medium text-gray-500">
+                                        Group: ₹799 (2-3), ₹699 (4-5)
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-sm text-gray-500">Personalized tuition for difficult subjects.</p>
+                                <div class="mt-8 flex flex-col gap-3 flex-1">
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                        Focus on Core Fundamentals
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                        Regular Doubt Clearing
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                        Exam Preparation Support
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm text-gray-700">
+                                        <span
+                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                        Academic Guidance
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Schedule Info -->
+                            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6 md:p-8">
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h4 class="font-bold text-black mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">schedule</span>
+                                            Class Schedule
+                                        </h4>
+                                        <ul class="space-y-3 text-sm text-gray-600">
+                                            <li class="flex justify-between border-b border-gray-200 pb-2">
+                                                <span>Weekdays</span>
+                                                <span class="font-bold text-black">8:00 PM – 9:00 PM</span>
+                                            </li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2">
+                                                <span>Sunday</span>
+                                                <span class="font-bold text-black">10:00 AM – 12:00 PM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-black mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">school</span>
+                                            Mode of Learning
+                                        </h4>
+                                        <ul class="space-y-3 text-sm text-gray-600">
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold text-black min-w-[60px]">Online:</span>
+                                                <span>Google Meet (Live Interactive Sessions)</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold text-black min-w-[60px]">Offline:</span>
+                                                <span>In-person classes on Sundays (Trivandrum)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const toggles = document.querySelectorAll('input[name="pricing-toggle"]');
+                                const servicesContainer = document.getElementById('pricing-services');
+                                const coursesContainer = document.getElementById('pricing-courses');
+
+                                toggles.forEach(toggle => {
+                                    toggle.addEventListener('change', (e) => {
+                                        if (e.target.value === 'services') {
+                                            servicesContainer.classList.remove('hidden');
+                                            coursesContainer.classList.add('hidden');
+                                        } else {
+                                            servicesContainer.classList.add('hidden');
+                                            coursesContainer.classList.remove('hidden');
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+            </section>
+            <section class="bg-background-off py-20" id="about">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <h2 class="text-3xl font-black text-black sm:text-4xl mb-12 text-center">Contact Us</h2>
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-4xl">
+                            <!-- Email -->
+                            <a href="mailto:contact@aroha.com"
+                                class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white shadow-sm border border-gray-100 w-full md:w-1/2 hover:shadow-md transition-all hover:-translate-y-1 group">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <span class="material-symbols-outlined text-[32px]">mail</span>
+                                </div>
+                                <div class="text-center">
+                                    <span
+                                        class="block text-sm text-gray-500 font-medium uppercase tracking-wider mb-1">Email</span>
+                                    <span class="text-xl font-bold text-black">contact@aroha.com</span>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="#" target="_blank"
+                                class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white shadow-sm border border-gray-100 w-full md:w-1/2 hover:shadow-md transition-all hover:-translate-y-1 group">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-pink-50 text-pink-600 group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <span class="material-symbols-outlined text-[32px]">photo_camera</span>
+                                </div>
+                                <div class="text-center">
+                                    <span
+                                        class="block text-sm text-gray-500 font-medium uppercase tracking-wider mb-1">Instagram</span>
+                                    <span class="text-xl font-bold text-black">@aroha_digital</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-primary py-12 text-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="text-3xl font-black tracking-tighter text-black font-display select-none">
+                            <span class="text-white">{</span>aroha<span class="text-white">}</span>
+                        </a>
+                    </div>
+                    <div class="flex gap-6 text-sm font-medium text-black/80">
+                        <a class="hover:text-black transition-colors" href="#">Services</a>
+                        <a class="hover:text-black transition-colors" href="#">Pricing</a>
+                        <a class="hover:text-black transition-colors" href="#">Privacy Policy</a>
+                    </div>
+                    <div class="text-sm text-black/70">
+                        © 2024 Aroha Digital. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
