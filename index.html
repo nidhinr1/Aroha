@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="utf-8" />
@@ -7,698 +7,327 @@
     <title>Aroha Digital</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
-        rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#eeba2b",
-                        "background-light": "#ffffff",
-                        "background-off": "#f8f9fa",
-                        "text-main": "#000000",
-                        "text-muted": "#4b5563",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.375rem",
-                        "md": "0.375rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #d1d5db;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #9ca3af;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-background-light text-text-main antialiased selection:bg-primary/30 selection:text-black">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-        <header class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
-            <div class="flex h-16 w-full items-center justify-between px-6 lg:px-12 relative">
-                <a href="#" class="text-3xl font-medium tracking-tighter text-black font-display select-none">
-                    <span class="text-primary">{</span>aroha<span class="text-primary">}</span>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <div class="site-header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-mark">{</span>aroha<span class="logo-mark">}</span>
                 </a>
-                <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8">
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                        href="#services">Services</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                        href="#pricing">Pricing</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                        href="#about">About</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                        href="#about">Contact</a>
+                <nav class="site-nav" id="site-nav">
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">Contact</a>
                 </nav>
-                <a href="#about"
-                    class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-sm hover:shadow-md">
-                    Enquire Now
-                </a>
-                <button class="flex md:hidden text-black sm:hidden">
+                <div class="header-actions">
+                    <a href="#about" class="btn btn-primary header-cta">Enquire Now</a>
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined theme-icon">dark_mode</span>
+                    </button>
+                </div>
+                <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobile-nav">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
+            <div class="mobile-nav" id="mobile-nav">
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#about">Contact</a>
+                <a href="#about" class="btn btn-primary">Enquire Now</a>
+            </div>
         </header>
-        <main class="flex-grow">
-            <!-- Hero Carousel Section -->
-            <section class="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-32 lg:pb-28" id="hero-carousel-section">
-                <!-- Background Decorations -->
-                <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl -z-10"></div>
-                <div class="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl -z-10"></div>
+        <main class="content">
+            <section class="hero" id="hero-carousel-section">
+                <div class="hero-blob hero-blob-right"></div>
+                <div class="hero-blob hero-blob-left"></div>
 
-                <!-- Carousel Container -->
-                <div class="relative w-full overflow-hidden">
-                    <!-- Carousel Track -->
-                    <div class="flex transition-transform duration-700 ease-in-out" id="hero-carousel-track">
-
-                        <!-- Slide 1: Text LEFT, Image RIGHT -->
-                        <div class="w-full flex-shrink-0">
-                            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                                <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-                                    <!-- Text - Left on desktop -->
-                                    <div class="flex flex-col gap-6 text-center lg:text-left">
-                                        <h1
-                                            class="text-4xl font-black leading-[1.1] tracking-tight text-black sm:text-5xl lg:text-6xl">
-                                            Academic Projects You <span
-                                                class="bg-primary/20 px-2 decoration-primary underline decoration-4 underline-offset-4">Actually
+                <div class="hero-carousel">
+                    <div class="hero-carousel-track" id="hero-carousel-track">
+                        <div class="hero-slide">
+                            <div class="container">
+                                <div class="hero-grid">
+                                    <div class="hero-text">
+                                        <h1 class="hero-title">
+                                            Academic Projects You <span class="hero-highlight">Actually
                                                 Understand</span>
                                         </h1>
-                                        <p class="mx-auto max-w-lg text-lg leading-relaxed text-text-muted lg:mx-0">
+                                        <p class="hero-desc">
                                             Guided Django &amp; web projects with full explanation and viva support. We
                                             don't just give you code, we teach you how it works.
                                         </p>
-                                        <div
-                                            class="mt-4 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                                            <a href="#pricing"
-                                                class="flex h-12 w-fit items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25 mx-auto lg:mx-0">
-                                                View Project Services
-                                            </a>
+                                        <div class="hero-actions">
+                                            <a href="#pricing" class="btn btn-primary btn-large">View Project Services</a>
                                         </div>
-                                        <div
-                                            class="mt-6 flex items-center justify-center gap-4 lg:justify-start text-sm text-text-muted">
-                                            <div class="flex items-center gap-1">
+                                        <div class="hero-checks">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
                                                 <span>Viva Support</span>
                                             </div>
-                                            <div class="flex items-center gap-1">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
                                                 <span>Code Explanation</span>
                                             </div>
-                                            <div class="flex items-center gap-1">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
                                                 <span>Regular Updates</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Image - Right on desktop -->
-                                    <div
-                                        class="relative mx-auto w-full max-w-[600px] lg:max-w-none flex items-center justify-center">
-                                        <img alt="Aroha Digital Hero Image"
-                                            class="relative z-10 w-full max-w-[500px] h-auto transform transition-transform hover:-translate-y-2 duration-500 drop-shadow-2xl"
-                                            src="main.png" />
+                                    <div class="hero-image-wrap">
+                                        <img alt="Aroha Digital Hero Image" class="hero-image" src="assets/main.png" />
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
-                        <div class="w-full flex-shrink-0">
-                            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                                <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-                                    <!-- Image - Left on desktop -->
-                                    <div
-                                        class="relative mx-auto w-full max-w-[600px] lg:max-w-none flex items-center justify-center order-2 lg:order-1">
-                                        <img alt="Study with Aroha Digital"
-                                            class="relative z-10 w-full max-w-[500px] h-auto transform transition-transform hover:-translate-y-2 duration-500 drop-shadow-2xl"
-                                            src="study.png" />
-                                    </div>
-                                    <!-- Text - Right on desktop -->
-                                    <div class="flex flex-col gap-6 text-center lg:text-left order-1 lg:order-2">
-                                        <h1
-                                            class="text-4xl font-black leading-[1.1] tracking-tight text-black sm:text-5xl lg:text-6xl">
-                                            Learn concepts the <span
-                                                class="bg-primary/20 px-2 decoration-primary underline decoration-4 underline-offset-4">
-                                                right way</span>
+                        <div class="hero-slide">
+                            <div class="container">
+                                <div class="hero-grid hero-grid-reverse">
+                                    <div class="hero-text">
+                                        <h1 class="hero-title">
+                                            Easy to understand <span class="hero-highlight">Docuementation with Viva
+                                                Preparation</span>
                                         </h1>
-                                        <p class="mx-auto max-w-lg text-lg leading-relaxed text-text-muted lg:mx-0">
-                                            Project-based Django courses &amp; Computer Science tuition designed to
-                                            help you truly understand core concepts, clear doubts regularly, and stay
-                                            confident in academics and mini projects.
+                                        <p class="hero-desc">
+                                            Guided Django &amp; web projects with full explanation and viva support. We
+                                            don't just give you code, we teach you how it works.
                                         </p>
-                                        <div
-                                            class="mt-4 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                                            <a href="#pricing"
-                                                class="flex h-12 w-fit items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25 mx-auto lg:mx-0">
-                                                View Courses
-                                            </a>
+                                        <div class="hero-actions">
+                                            <a href="#pricing" class="btn btn-primary btn-large">View Projects</a>
                                         </div>
-                                        <div
-                                            class="mt-6 flex items-center justify-center gap-4 lg:justify-start text-sm text-text-muted">
-                                            <div class="flex items-center gap-1">
+                                        <div class="hero-checks">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
-                                                <span>Python Django (Project-Based Learning)</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
+                                                <span>Viva Support</span>
                                             </div>
-                                            <div class="flex items-center gap-1">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
-                                                <span>Computer Science Subject Tuition</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
+                                                <span>Code Explanation</span>
                                             </div>
-                                            <div class="flex items-center gap-1">
+                                            <div class="hero-check">
                                                 <span
-                                                    class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
-                                                <span>Doubt-Clearing & Concept Support</span>
+                                                    class="material-symbols-outlined check-icon">check_circle</span>
+                                                <span>Regular Updates</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="hero-image-wrap">
+                                        <img alt="Study with Aroha Digital" class="hero-image" src="assets/study.png" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <!-- Navigation Arrows - Small, edge-positioned, semi-transparent -->
-                    <button id="hero-carousel-prev"
-                        class="absolute left-1 lg:left-2 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 shadow-md transition-all opacity-40 hover:opacity-100 hover:bg-primary hover:scale-110 active:scale-95 border border-gray-200">
-                        <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                    <button id="hero-carousel-prev" class="carousel-nav carousel-prev" aria-label="Previous slide">
+                        <span class="material-symbols-outlined">chevron_left</span>
                     </button>
-                    <button id="hero-carousel-next"
-                        class="absolute right-1 lg:right-2 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 shadow-md transition-all opacity-40 hover:opacity-100 hover:bg-primary hover:scale-110 active:scale-95 border border-gray-200">
-                        <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                    <button id="hero-carousel-next" class="carousel-nav carousel-next" aria-label="Next slide">
+                        <span class="material-symbols-outlined">chevron_right</span>
                     </button>
                 </div>
 
-                <!-- Indicator Dots -->
-                <div class="flex items-center justify-center gap-3 mt-10">
-                    <button
-                        class="hero-carousel-dot h-3 w-8 rounded-full bg-primary transition-all duration-300 shadow-sm"
-                        data-slide="0"></button>
-                    <button
-                        class="hero-carousel-dot h-3 w-3 rounded-full bg-gray-300 transition-all duration-300 shadow-sm hover:bg-gray-400"
-                        data-slide="1"></button>
+                <div class="hero-dots">
+                    <button class="hero-carousel-dot is-active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="hero-carousel-dot" data-slide="1" aria-label="Slide 2"></button>
                 </div>
-
-                <!-- Hero Carousel Script -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const track = document.getElementById('hero-carousel-track');
-                        const slides = track.children.length;
-                        const dots = document.querySelectorAll('.hero-carousel-dot');
-                        const prevBtn = document.getElementById('hero-carousel-prev');
-                        const nextBtn = document.getElementById('hero-carousel-next');
-                        let currentSlide = 0;
-                        let autoSlideInterval;
-
-                        function goToSlide(index) {
-                            if (index < 0) index = slides - 1;
-                            if (index >= slides) index = 0;
-                            currentSlide = index;
-                            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-                            // Update dots
-                            dots.forEach((dot, i) => {
-                                if (i === currentSlide) {
-                                    dot.classList.remove('bg-gray-300', 'w-3');
-                                    dot.classList.add('bg-primary', 'w-8');
-                                } else {
-                                    dot.classList.add('bg-gray-300', 'w-3');
-                                    dot.classList.remove('bg-primary', 'w-8');
-                                }
-                            });
-                        }
-
-                        function startAutoSlide() {
-                            autoSlideInterval = setInterval(() => {
-                                goToSlide(currentSlide + 1);
-                            }, 2500);
-                        }
-
-                        function resetAutoSlide() {
-                            clearInterval(autoSlideInterval);
-                            startAutoSlide();
-                        }
-
-                        prevBtn.addEventListener('click', () => {
-                            goToSlide(currentSlide - 1);
-                            resetAutoSlide();
-                        });
-
-                        nextBtn.addEventListener('click', () => {
-                            goToSlide(currentSlide + 1);
-                            resetAutoSlide();
-                        });
-
-                        dots.forEach((dot, i) => {
-                            dot.addEventListener('click', () => {
-                                goToSlide(i);
-                                resetAutoSlide();
-                            });
-                        });
-
-                        // Initialize
-                        goToSlide(0);
-                        startAutoSlide();
-                    });
-                </script>
             </section>
-            <section class="bg-background-off py-20" id="services">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="mb-12 text-center">
-                        <h2 class="text-base font-bold text-primary uppercase tracking-wide">What We Offer</h2>
-                        <h3 class="mt-2 text-3xl font-black tracking-tight text-black sm:text-4xl">Our Core Services
-                        </h3>
+
+            <section class="section section-alt" id="services">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-label">What We Offer</h2>
+                        <h3 class="section-title">Our Core Services</h3>
                     </div>
-                    <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-                        <div
-                            class="group relative flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border border-gray-100">
-                            <div
-                                class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-primary group-hover:text-black transition-colors">
-                                <span class="material-symbols-outlined text-[32px]">code_blocks</span>
+                    <div class="service-grid">
+                        <article class="service-card">
+                            <div class="icon-badge icon-badge-blue">
+                                <span class="material-symbols-outlined">code_blocks</span>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-black">Project Building Service</h4>
-                                <p class="mt-2 text-text-muted">Complete end-to-end support for your academic
-                                    projects.</p>
+                                <h4 class="card-title">Project Building Service</h4>
+                                <p class="card-text">Complete end-to-end support for your academic projects.</p>
                             </div>
-                            <ul class="flex flex-col gap-3 mt-auto">
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                            <ul class="card-list">
+                                <li>
+                                    <span class="material-symbols-outlined">check</span>
                                     Ideation &amp; Topic Selection
                                 </li>
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                <li>
+                                    <span class="material-symbols-outlined">check</span>
+                                    Regular Updates
+                                </li>
+                                <li>
+                                    <span class="material-symbols-outlined">check</span>
                                     Development &amp; Implementation
                                 </li>
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                                <li>
+                                    <span class="material-symbols-outlined">check</span>
                                     Viva Preparation &amp; Mock Tests
                                 </li>
                             </ul>
-                        </div>
-                        <div
-                            class="group relative flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border border-gray-100">
-                            <div
-                                class="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-purple-600 group-hover:bg-primary group-hover:text-black transition-colors">
-                                <span class="material-symbols-outlined text-[32px]">school</span>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-black">Courses</h4>
-                                <p class="mt-2 text-text-muted">Learn by doing. Master concepts through practical
-                                    implementation.</p>
-                            </div>
-                            <ul class="flex flex-col gap-3 mt-auto">
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
-                                    Focus on Core Fundamentals
-                                </li>
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
-                                    Real-world Application Building
-                                </li>
-                                <li class="flex items-center gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
-                                    Personalized Tuition
-                                </li>
-                            </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
-            <section class="bg-white py-20" id="pricing">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="mb-8 text-center">
-                        <h2 class="text-3xl font-black tracking-tight text-black sm:text-4xl">Transparent Pricing</h2>
-                        <p class="mt-4 text-text-muted">Choose the plan that fits your academic requirements.</p>
+
+            <section class="section" id="pricing">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Transparent Pricing</h2>
+                        <p class="section-desc">Choose the plan that fits your academic requirements.</p>
                     </div>
-                    <div class="flex justify-center mb-12">
-                        <div class="flex h-12 w-full max-w-[320px] items-center rounded-full bg-gray-100 p-1">
-                            <label class="cursor-pointer flex-1 relative h-full">
-                                <input checked="" class="peer sr-only" name="pricing-toggle" type="radio"
-                                    value="services" />
-                                <div
-                                    class="flex h-full w-full items-center justify-center rounded-full text-sm font-bold text-gray-500 transition-all peer-checked:bg-white peer-checked:text-black peer-checked:shadow-sm">
-                                    Project Services
-                                </div>
-                            </label>
-                            <label class="cursor-pointer flex-1 relative h-full">
-                                <input class="peer sr-only" name="pricing-toggle" type="radio" value="courses" />
-                                <div
-                                    class="flex h-full w-full items-center justify-center rounded-full text-sm font-bold text-gray-500 transition-all peer-checked:bg-white peer-checked:text-black peer-checked:shadow-sm">
-                                    Courses
-                                </div>
-                            </label>
-                        </div>
+                    <div class="pricing-toggle">
+                        <label class="toggle-option">
+                            <input checked="" name="pricing-toggle" type="radio" value="services" />
+                            <span class="toggle-pill">Project Services</span>
+                        </label>
                     </div>
-                    <div id="pricing-services"
-                        class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto transition-opacity duration-300">
-                        <div
-                            class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-primary hover:shadow-lg">
-                            <h3 class="text-lg font-bold text-black">Micro Project</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-4xl font-black text-black">₹1500</span>
-                                <span class="text-sm font-medium text-gray-500">/project</span>
+                    <div id="pricing-services" class="pricing-grid">
+                        <article class="pricing-card">
+                            <h3>Micro Project</h3>
+                            <div class="price">
+                                <span class="amount">₹1500</span>
+                                <span class="unit">/project</span>
                             </div>
-                            <p class="mt-2 text-sm text-gray-500">For single module academic projects.</p>
-                            <div class="mt-8 flex flex-col gap-3 flex-1">
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                            <p class="price-note">For single module academic projects.</p>
+                            <div class="price-features">
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Ideation
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Implementation
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Documentation
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-xl transition-transform hover:-translate-y-2">
-                            <div
-                                class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-black px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
-                                Most Popular
+                        </article>
+                        <article class="pricing-card featured">
+                            <div class="pricing-badge">Most Popular</div>
+                            <h3>Mini Project</h3>
+                            <div class="price">
+                                <span class="amount">₹2500</span>
+                                <span class="unit">/project</span>
                             </div>
-                            <h3 class="text-lg font-bold text-black">Mini Project</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-4xl font-black text-black">₹2500</span>
-                                <span class="text-sm font-medium text-gray-500">/project</span>
-                            </div>
-                            <p class="mt-2 text-sm text-gray-500">For 2-3 module academic projects.</p>
-                            <div class="mt-8 flex flex-col gap-3 flex-1">
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            <p class="price-note">For 2-3 module academic projects.</p>
+                            <div class="price-features">
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Ideation
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Implementation and Delivery
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Regular Updates
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Code Walkthrough and Documentation
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Viva Support &amp; Mocks
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-primary hover:shadow-lg">
-                            <h3 class="text-lg font-bold text-black">Major Project</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-4xl font-black text-black">₹6000</span>
-                                <span class="text-sm font-medium text-gray-500">/project</span>
+                        </article>
+                        <article class="pricing-card">
+                            <h3>Major Project</h3>
+                            <div class="price">
+                                <span class="amount">₹6000</span>
+                                <span class="unit">/project</span>
                             </div>
-                            <p class="mt-2 text-sm text-gray-500">For 4-5 module academic projects.</p>
-                            <div class="mt-8 flex flex-col gap-3 flex-1">
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                            <p class="price-note">For 4-5 module academic projects.</p>
+                            <div class="price-features">
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Ideation
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Project Implementation and Delivery
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Regular Updates
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Viva Support &amp; Mocks
                                 </div>
-                                <div class="flex items-start gap-3 text-sm text-gray-700">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                                <div>
+                                    <span class="material-symbols-outlined">check_circle</span>
                                     Code Walkthrough and Documentation
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
-
-                    <div id="pricing-courses" class="hidden max-w-6xl mx-auto transition-opacity duration-300">
-                        <div class="grid gap-6 md:grid-cols-2 mb-12">
-                            <!-- Python Django 101 -->
-                            <div
-                                class="flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-xl transition-transform hover:-translate-y-2">
-                                <div
-                                    class="absolute -top-4 right-8 rounded-full bg-black px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
-                                    Project-Based
-                                </div>
-                                <h3 class="text-xl font-bold text-black">Python Django 101</h3>
-                                <div class="mt-4 flex flex-col gap-1">
-                                    <div class="flex items-baseline gap-1">
-                                        <span class="text-4xl font-black text-black">₹999</span>
-                                        <span class="text-sm font-medium text-gray-500">/ Online</span>
-                                    </div>
-                                    <div class="text-sm font-medium text-gray-500">
-                                        or ₹1499 for Offline (Trivandrum)
-                                    </div>
-                                </div>
-                                <p class="mt-4 text-sm text-gray-500">Build real-world projects while learning.</p>
-                                <div class="mt-8 flex flex-col gap-3 flex-1">
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-                                        Learn by Building Projects
-                                    </div>
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-                                        Strong Core Concept Understanding
-                                    </div>
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-                                        Notes & Study Materials
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CS Topics Tuition -->
-                            <div
-                                class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-transform hover:-translate-y-2 hover:border-black hover:shadow-lg">
-                                <h3 class="text-xl font-bold text-black">CS Topics Tuition</h3>
-                                <div class="mt-4 flex flex-col gap-1">
-                                    <div class="flex items-baseline gap-1">
-                                        <span class="text-4xl font-black text-black">₹999</span>
-                                        <span class="text-sm font-medium text-gray-500">/ Individual</span>
-                                    </div>
-                                    <div class="text-sm font-medium text-gray-500">
-                                        Group: ₹799 (2-3), ₹699 (4-5)
-                                    </div>
-                                </div>
-                                <p class="mt-4 text-sm text-gray-500">Personalized tuition for difficult subjects.</p>
-                                <div class="mt-8 flex flex-col gap-3 flex-1">
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
-                                        Focus on Core Fundamentals
-                                    </div>
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
-                                        Regular Doubt Clearing
-                                    </div>
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
-                                        Exam Preparation Support
-                                    </div>
-                                    <div class="flex items-start gap-3 text-sm text-gray-700">
-                                        <span
-                                            class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
-                                        Academic Guidance
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Schedule Info -->
-                            <div class="rounded-2xl bg-gray-50 border border-gray-100 p-6 md:p-8">
-                                <div class="grid md:grid-cols-2 gap-8">
-                                    <div>
-                                        <h4 class="font-bold text-black mb-4 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary">schedule</span>
-                                            Class Schedule
-                                        </h4>
-                                        <ul class="space-y-3 text-sm text-gray-600">
-                                            <li class="flex justify-between border-b border-gray-200 pb-2">
-                                                <span>Weekdays</span>
-                                                <span class="font-bold text-black">8:00 PM – 9:00 PM</span>
-                                            </li>
-                                            <li class="flex justify-between border-b border-gray-200 pb-2">
-                                                <span>Sunday</span>
-                                                <span class="font-bold text-black">10:00 AM – 12:00 PM</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-black mb-4 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary">school</span>
-                                            Mode of Learning
-                                        </h4>
-                                        <ul class="space-y-3 text-sm text-gray-600">
-                                            <li class="flex items-start gap-2">
-                                                <span class="font-bold text-black min-w-[60px]">Online:</span>
-                                                <span>Google Meet (Live Interactive Sessions)</span>
-                                            </li>
-                                            <li class="flex items-start gap-2">
-                                                <span class="font-bold text-black min-w-[60px]">Offline:</span>
-                                                <span>In-person classes on Sundays (Trivandrum)</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const toggles = document.querySelectorAll('input[name="pricing-toggle"]');
-                                const servicesContainer = document.getElementById('pricing-services');
-                                const coursesContainer = document.getElementById('pricing-courses');
-
-                                toggles.forEach(toggle => {
-                                    toggle.addEventListener('change', (e) => {
-                                        if (e.target.value === 'services') {
-                                            servicesContainer.classList.remove('hidden');
-                                            coursesContainer.classList.add('hidden');
-                                        } else {
-                                            servicesContainer.classList.add('hidden');
-                                            coursesContainer.classList.remove('hidden');
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
-                    </div>
+                </div>
             </section>
-            <section class="bg-white py-20" id="about">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-black text-black sm:text-4xl mb-12 text-center">Get In Touch</h2>
 
-                    <!-- Contact Layout: Character + Card -->
-                    <div class="flex items-center justify-center max-w-4xl mx-auto">
-                        <div class="relative flex items-center justify-center w-full">
-
-                            <!-- Character Image - Positioned to "hold" the card -->
-                            <div class="hidden md:block absolute left-16 lg:left-10 bottom-0 z-10">
-                                <img src="trust.png" alt="Contact Character"
-                                    class="w-64 lg:w-80 h-auto drop-shadow-xl transform hover:-translate-y-2 transition-transform duration-500" />
+            <section class="section" id="about">
+                <div class="container">
+                    <h2 class="section-title text-center">Get In Touch</h2>
+                    <div class="contact-wrapper">
+                        <div class="contact-card">
+                            <div class="contact-list">
+                                <a href="mailto:contact@aroha.com" class="contact-item">
+                                    <div class="contact-icon">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <div>
+                                        <span class="contact-label">Email</span>
+                                        <span class="contact-value">arohadigital26@gmail.com</span>
+                                    </div>
+                                </a>
+                                <div class="contact-divider"></div>
+                                <a href="https://instagram.com/aroha_digital" target="_blank"
+                                    class="contact-item">
+                                    <div class="contact-icon">
+                                        <span class="material-symbols-outlined">photo_camera</span>
+                                    </div>
+                                    <div>
+                                        <span class="contact-label">Instagram</span>
+                                        <span class="contact-value">@aroha_digital</span>
+                                    </div>
+                                </a>
                             </div>
-
-                            <!-- Contact Card -->
-                            <div
-                                class="w-full md:w-3/4 lg:w-2/3 md:ml-auto rounded-2xl border-2 border-primary bg-orange-50/50 p-8 md:p-10 lg:p-12 shadow-sm">
-                                <div class="flex flex-col gap-8">
-
-                                    <!-- Email -->
-                                    <a href="mailto:contact@aroha.com"
-                                        class="flex items-center gap-4 group transition-all hover:translate-x-2">
-                                        <div
-                                            class="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm border border-gray-100 group-hover:bg-primary group-hover:border-primary transition-colors">
-                                            <span
-                                                class="material-symbols-outlined text-[28px] text-blue-600 group-hover:text-black transition-colors">mail</span>
-                                        </div>
-                                        <div>
-                                            <span
-                                                class="block text-xs text-gray-500 font-medium uppercase tracking-wider mb-0.5">Email</span>
-                                            <span class="text-lg font-bold text-black">arohadigital26@gmail.com</span>
-                                        </div>
-                                    </a>
-
-                                    <!-- Divider -->
-                                    <div class="border-t border-primary/30"></div>
-
-                                    <!-- Instagram -->
-                                    <a href="https://instagram.com/aroha_digital" target="_blank"
-                                        class="flex items-center gap-4 group transition-all hover:translate-x-2">
-                                        <div
-                                            class="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm border border-gray-100 group-hover:bg-primary group-hover:border-primary transition-colors">
-                                            <span
-                                                class="material-symbols-outlined text-[28px] text-pink-600 group-hover:text-black transition-colors">photo_camera</span>
-                                        </div>
-                                        <div>
-                                            <span
-                                                class="block text-xs text-gray-500 font-medium uppercase tracking-wider mb-0.5">Instagram</span>
-                                            <span class="text-lg font-bold text-black">@aroha_digital</span>
-                                        </div>
-                                    </a>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
             </section>
         </main>
-        <footer class="bg-primary py-12 text-black">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-                    <div class="flex items-center gap-2">
-                        <a href="#" class="text-3xl font-medium tracking-tighter text-black font-display select-none">
-                            <span class="text-white">{</span>aroha<span class="text-white">}</span>
-                        </a>
-                    </div>
-
-                    <div class="text-sm text-black/70">
-                        © 2026 Aroha Digital. All rights reserved.
-                    </div>
-                </div>
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-mark inverse">{</span>aroha<span class="logo-mark inverse">}</span>
+                </a>
+                <div class="footer-note">© 2026 Aroha Digital. All rights reserved.</div>
             </div>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
